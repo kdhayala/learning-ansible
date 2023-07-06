@@ -29,6 +29,13 @@
       vars:
         URL: task.example.com
 
+- name: print fact
+  hosts: all
+  tasks:
+    - name: print hostname
+      ansible.builtin.debug:
+        msg: Hostname = {{ ansible hostname }}
+
 - name: Demo on Inventory variable
   hosts: all
   tasks:
@@ -37,11 +44,6 @@
         msg: URL = {{ URL }}
 
 
-- name: print fact
-  hosts: all
-  tasks:
-    - name: print hostname
-      ansible.builtin.debug:
-        msg: Hostname = {{ ansible hostname }}
+
 
 
