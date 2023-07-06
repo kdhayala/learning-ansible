@@ -40,7 +40,8 @@
 - name: print fact
   hosts: all
   tasks:
-    - ansible.builtin.debug:
+    - name: print hostname
+      ansible.builtin.debug:
         msg: Hostname = {{ ansible hostname }}
 
 
