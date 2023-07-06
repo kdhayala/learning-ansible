@@ -47,8 +47,7 @@
 - name: Register a variable example
   hosts: all
   tasks:
-    - name: Get uptime
-      ansible.builtin.shell: date
+    - ansible.builtin.shell: date
       register: out
 
     - name: Print out register
