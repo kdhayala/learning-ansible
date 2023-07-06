@@ -5,7 +5,9 @@
   tasks:
     - name: Print URL
       ansible.builtin.debug:
-      msg: URL = {{ URL }}
+        msg: URL = {{ URL }}
+
+
 
 - name: Demo file variable
   hosts: all
@@ -14,14 +16,16 @@
   tasks:
     - name: Print URL
       ansible.builtin.debug:
-      msg: URL = {{URL}}
+        msg: URL = {{ URL }}
+
 
 - name: Demo on Task variable
   hosts: all
   tasks:
     - name: Print URL
       ansible.builtin.debug:
-      msg: URL = {{URL}}
+        msg: URL = {{ URL }}
+
       vars:
         URL: task.example.com
 
@@ -30,5 +34,6 @@
   tasks:
     - name: Print URL
       ansible.builtin.debug:
-      msg: URL = {{URL}}
+        msg: URL = {{ URL }}
+
 
