@@ -3,12 +3,14 @@
   tasks:
     - name: print Hello
       ansible.builtin.debug:
-      msg: Hello
+        msg: Hello
+
 
 - name: Demo of play2
   hosts: all
   tasks:
     - name: Print bye
       ansible.builtin.debug:
-      msg: bye
+        msg: bye
+
 
