@@ -14,4 +14,14 @@ From a task output (register)
 Set a variable using task (set_fact)
 
 attrubites called as output
-please check user module in ansible documents ( We can get the more info)
+please check user module in ansible documents ( We can get the more inf)
+
+- name: Register a variable example
+  hosts: all
+  tasks:
+    - ansible.builtin.shell: date
+      register: out
+
+    - name: Print out register
+      ansible.builtin.debug:
+      msg: "{{ out }}"

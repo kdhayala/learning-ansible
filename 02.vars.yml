@@ -44,15 +44,7 @@
         msg: URL = {{ URL }}
 
 
-- name: Register a variable example
-  hosts: all
-  tasks:
-    - ansible.builtin.shell: date
-      register: out
 
-    - name: Print out register
-      ansible.builtin.debug:
-        msg: "{{ out }}"
 
 
     - name: Declare a face
