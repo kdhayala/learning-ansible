@@ -34,7 +34,7 @@
   tasks:
     - name: print hostname
       ansible.builtin.debug:
-        msg: Hostname = {{ ansible_hostname }}
+        msg: Hostname = {{ ansible_
 
 - name: Demo on Inventory variable
   hosts: all
