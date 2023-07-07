@@ -36,12 +36,12 @@
       ansible.builtin.debug:
         msg: Hostname = {{ ansible_hostname }}
 
-- name: Demo on Inventory variable
-  hosts: all
-  tasks:
-    - name: Print URL
-      ansible.builtin.debug:
-        msg: URL = {{ URL }}
+#//- name: Demo on Inventory variable
+  # hosts: all
+    #tasks:
+      # - name: Print URL
+        #  ansible.builtin.debug:
+        # msg: URL = {{ URL }}
 
 
 
