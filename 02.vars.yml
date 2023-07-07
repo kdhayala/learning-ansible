@@ -55,10 +55,11 @@
         msg: "{{ out }}"
 
 
-
-
-
-
-
+    - name: Declare a face
+      ansible.builtin.set_fact:
+        SHELL_STDOUT: "{{out.stdout}}"
+    - name:  print shell output from set_fact variable
+      ansible.builtin.debug:
+        msg: OUTPUT = {{SHELL_STDOUT}}
 
 
