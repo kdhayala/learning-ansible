@@ -36,22 +36,33 @@
       ansible.builtin.debug:
         msg: Hostname = {{ ansible_hostname }}
 
-#//- name: Demo on Inventory variable
-  # hosts: all
-    #tasks:
-      # - name: Print URL
-        #  ansible.builtin.debug:
-        # msg: URL = {{ URL }}
+- name: Demo on Inventory variable
+  hosts: all
+  tasks:
+       - name: Print URL
+         ansible.builtin.debug:
+           msg: URL = {{ URL }}
 
 
 
 
 
-    - name: Declare a face
-      ansible.builtin.set_fact:
-        SHELL_STDOUT: "{{out.stdout}}"
-    - name:  print shell output from set_fact variable
-      ansible.builtin.debug:
-        msg: OUTPUT = {{SHELL_STDOUT}}
+- name: Register a variable example
+  hosts: all
+  tasks:
+    - ansible.builtin.shell: uptime
+      register: out
+
+- name: Print out register
+  ansible.builtin.debug:
+      msg: "{{ out }}"
+
+- name: Declare a fact
+  ansible.builtin.set_fact:
+    SHELL_STDOUT: "{{out.stdout}}"
+
+- name:  print shell output from set_fact variable
+  ansible.builtin.debug:
+    msg: OUTPUT = {{SHELL_STDOUT}}
 
 
